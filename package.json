@@ -1,7 +1,7 @@
 {
   "name": "@matherioneu/container",
   "version": "1.0.0",
-  "license": "GPLv3",
+  "license": "GPL-3.0-only",
   "private": false,
   "author": "Mia <vottus@vott.us>",
   "scripts": {
