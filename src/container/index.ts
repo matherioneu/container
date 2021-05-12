@@ -20,10 +20,10 @@
  * The Container class representing the Service Container.
  */
 class Container {
-  _services: Record<string, unknown> = {};
+  _services: Record<string, unknown> = {}
 
   constructor(services?: Record<string, unknown>) {
-    if (services) this.register(services);
+    if (services) this.register(services)
   }
 
   /**
@@ -34,10 +34,10 @@ class Container {
    */
   public register(services: Record<string, unknown>): Container {
     for (const serviceName in services) {
-      this._services[serviceName] = services[serviceName];
+      this._services[serviceName] = services[serviceName]
     }
 
-    return this;
+    return this
   }
 
   /**
@@ -47,8 +47,16 @@ class Container {
    * @returns {T} The service
    */
   public service<T>(serviceName: string): T {
-    return this._services[serviceName] as T;
+    return this._services[serviceName] as T
+  }
+
+  /**
+   * Unregister services from the container.
+   * @param serviceNames Names of services to unregister
+   */
+  public unregister(serviceNames: string[]) {
+    serviceNames.forEach((name) => (this._services[name] = undefined))
   }
 }
 
-export default Container;
+export default Container
