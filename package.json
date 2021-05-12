@@ -1,9 +1,11 @@
 {
   "name": "@matherioneu/container",
-  "version": "1.0.1-1",
+  "version": "1.0.1-2",
   "license": "GPL-3.0-only",
   "private": false,
   "author": "Mia <vottus@vott.us>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "style": "prettier --write .",
@@ -19,6 +21,7 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
+    "@matherioneu/container": "^1.0.1-1",
     "@typescript-eslint/parser": "^4.23.0"
   }
 }
