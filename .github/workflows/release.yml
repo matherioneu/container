@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Install dependencies
+        run: yarn
+
       - name: Build
         run: yarn build
 
@@ -38,10 +41,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Node.js ${{ matrix.os }}
+      - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.os }}
+          node-version: ${{ matrix.node }}
           registry-url: https://registry.npmjs.org/
 
       - name: Publish to NPM
@@ -66,10 +69,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Node.js ${{ matrix.os }}
+      - name: Setup Node.js ${{ matrix.node }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.os }}
+          node-version: ${{ matrix.node }}
           registry-url: https://npm.pkg.github.com/
 
       - name: Publish to GitHub Packages
