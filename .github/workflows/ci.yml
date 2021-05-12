@@ -44,4 +44,4 @@ jobs:
         run: yarn lint
 
       - name: Test build
-      - run: yarn build --noEmit
+        run: yarn build --noEmit
