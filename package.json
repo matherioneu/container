@@ -1,6 +1,6 @@
 {
   "name": "@matherioneu/container",
-  "version": "1.0.1-2",
+  "version": "1.0.1-3",
   "license": "GPL-3.0-only",
   "private": false,
   "author": "Mia <vottus@vott.us>",
@@ -14,11 +14,11 @@
   "devDependencies": {
     "@matherioneu/ts": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.0",
-    "typescript": "^4.2.4",
-    "@typescript-eslint/parser": "^4.23.0"
+    "typescript": "^4.2.4"
   }
 }
